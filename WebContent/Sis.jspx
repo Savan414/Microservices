@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" version="2.0">
+	<jsp:directive.page contentType="text/html; charset=ISO-8859-1"
+		pageEncoding="ISO-8859-1" session="false" />
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+	<html lan="en">
+<head>
+<title>Proj-D</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	id="bootstrap-css" rel="stylesheet" />
+<link href="/44F18_ProjD/res/B.css" rel="stylesheet" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	;
+</script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	;
+</script>
+</head>
+<body>
+	<div style="margin-top: 40px" class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-6 col-md-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<a role="button" class="btn btn-sm btn-link" href="Dash.do"><span
+							class="glyphicon glyphicon-triangle-left" /> Dashboard <span
+							class="glyphicon glyphicon-triangle-left" /></a><strong>SIS
+							Report Generator</strong>
+					</div>
+					<div class="panel-body">
+						<form method="POST" action="Sis.do" role="form">
+							<fieldset>
+								<div class="row">
+									<div class="center-block">
+										<img alt="" src="/44F18_ProjD/res/Sis.png?sz=120"
+											class="profile-img" />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-12 ">
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon"><i
+													class="glyphicon glyphicon-education"><span /></i></span><input
+													type="text" value="${prefix }" name="prefix"
+													placeholder="Name prefix ..." class="form-control" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group">
+												<span class="input-group-addon"><i
+													class="glyphicon glyphicon-step-forward"><span /></i></span><input
+													type="text" value="${minGpa }" name="minGpa"
+													placeholder="Minimum GPA" class="form-control" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group">
+												<select id="sortBy" name="sortBy"><option
+														selected="any" value="NONE">Select One:</option>
+													<option value="SURNAME">Last Name</option>
+													<option value="MAJOR">Major</option>
+													<option value="COURSES">Number of Courses</option>
+													<option value="GPA">GPA</option></select>
+											</div>
+										</div>
+										<div class="form-group">
+											<input value="Generate Report" name="calc"
+												class="btn btn-lg btn-primary btn-block" type="submit" />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12 col-md-12">
+											<p class="text-center">
+												<i>Sorted by ${sortBy }</i>
+											</p>
+											${error }
+											<c:if test="${!empty result and result.size() gt 0}">
+												<table style="margin: auto;" border="1">
+												<tr>
+													<th style="padding: 6px;">Name
+													</th>
+													<th style="padding: 6px;">Major
+													</th>
+													<th style="padding: 6px;">No. of Courses
+													</th>
+													<th style="padding: 6px;">GPA
+													</th>
+												</tr>
+												<c:forEach var="e" items="${result }">
+													<tr>
+														<td style="padding: 6px;">${e.name }</td>
+														<td style="padding: 6px;">${e.major }</td>
+														<td style="padding: 6px;">${e.courses }</td>
+														<td style="padding: 6px;">${e.gpa }</td>
+													</tr>
+												</c:forEach>
+											</table>
+											</c:if>		
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 col-md-12"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	</html>
+</jsp:root>

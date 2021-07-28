@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	version="2.0">
+	<jsp:directive.page contentType="text/html; charset=ISO-8859-1" 
+		pageEncoding="ISO-8859-1" session="false"/>
+	<jsp:output doctype-root-element="html"
+		doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"
+		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+		omit-xml-declaration="true" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>Proj-D</title>
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	id="bootstrap-css" rel="stylesheet" />
+<link href="/44F18_ProjD/res/B.css" rel="stylesheet" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	;
+</script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	;
+</script>
+</head>
+<body>
+	<div style="margin-top: 40px" class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-md-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<strong> DASHBOARD</strong>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="center-block">
+								<img alt="" src="/44F18_ProjD/res/Dash.png?sz=120"
+									class="profile-img" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-10 col-md-offset-1">
+								<div class="form-group">
+									<form method="post" action="Prime.do" role="form">
+										<input value="Primer Number Finder"
+											class="btn btn-lg btn-primary btn-block" type="submit" />
+									</form>
+								</div>
+								<div class="form-group">
+									<form method="post" action="Gps.do" role="form">
+										<input value="GPS Distance Calculator"
+											class="btn btn-lg btn-primary btn-block" type="submit" />
+									</form>
+								</div>
+								<div class="form-group">
+									<form method="post" action="Drone.do" role="form">
+										<input value="Drone Delivery Timer"
+											class="btn btn-lg btn-primary btn-block" type="submit" />
+									</form>
+								</div>
+								<div class="form-group">
+									<form method="post" action="Ride.do" role="form">
+										<input value="Ride Cost Estimator"
+											class="btn btn-lg btn-primary btn-block" type="submit" />
+									</form>
+								</div>
+								<div class="form-group">
+									<form method="post" action="Sis.do" role="form">
+										<input value="SIS Report Generator"
+											class="btn btn-lg btn-primary btn-block" type="submit" />
+									</form>
+								</div>
+								<div class="form-group">
+									<form method="post" action="Admin.do" role="form">
+										<input value="Analytics"
+											class="btn btn-lg btn-primary btn-block" type="submit" />
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+</jsp:root>
