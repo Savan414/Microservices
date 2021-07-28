@@ -54,13 +54,13 @@ After successful completion of the course, students are expected to be able to:
 
 ## Screenshots
 #### Dashboard
-![Dashboard](./screenshots/dash.jpg)
+![Dashboard](./screenshots/dash.JPG)
 
 #### Finding a Prime number between a given range of numbers
-![Prime](./screenshots/prime.jpg)
+![Prime](./screenshots/prime.JPG)
 
 #### Finding distance between two locations with gps coordinates using Google cloud gps api
-![GPS](./screenshots/gps.jpg)
+![GPS](./screenshots/gps.JPG)
 
 ## Deployment
 - Download the the project directory from github using github clone
